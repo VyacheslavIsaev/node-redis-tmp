@@ -1,0 +1,14 @@
+---
+version: '2'
+
+services:
+
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    ports:
+      - 9088:8080
+    volumes: 
+      - $PWD:/usr/app
+

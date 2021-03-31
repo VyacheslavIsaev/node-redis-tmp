@@ -2,14 +2,15 @@
     "name": "node-redis-tmp",
     "version": "1.0.0",
     "description": "Node.js + Redis project template.",
-    "main": "index.js",
+    "main": "app/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js"
+        "start": "node app/index.js"
     },
     "author": "Viacheslav Isaev",
     "license": "ISC",
     "dependencies": {
-        "express": "*"
+        "express": "*",
+        "redis": "^3.0.0"
     }
 }

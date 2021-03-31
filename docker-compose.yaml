@@ -1,7 +1,10 @@
 ---
-version: '2'
+version: '3'
 
 services:
+
+  redis-server:
+    image: redis:alpine
 
   app:
     build:
@@ -10,5 +13,5 @@ services:
     ports:
       - 9088:8080
     volumes: 
-      - $PWD:/usr/app
+      - $PWD/app:/usr/app/app
 

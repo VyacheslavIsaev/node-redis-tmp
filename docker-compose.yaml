@@ -7,6 +7,8 @@ services:
     image: redis:alpine
 
   app:
+    # restart: always
+    restart: on-failure
     build:
       dockerfile: Dockerfile
       context: ./

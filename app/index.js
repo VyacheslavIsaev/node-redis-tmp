@@ -1,5 +1,6 @@
 const express = require("express");
 const redis   = require("redis");
+const process = require("process");
 
 const PORT=8080;
 const VISITS="visits";
@@ -19,6 +20,10 @@ app.get("/", (req, res)=>{
         res.send("Total number of visits from start:"+visits);
         client.incr(VISITS);
     });
+});
+
+app.get("/stop", (rew, res)=>{
+    process.exit(3);
 });
 
 app.listen(PORT, ()=>{
